@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Οδοντιατρείο Καράπαπας | Περιστέρι | Ιωάννης &amp; Ιωάννα Καράπαπας</title>
+<meta name="description" content="Σύγχρονο οδοντιατρείο στο Περιστέρι. Πρόληψη, αισθητική οδοντιατρική, ενδοδοντία. Ιωάννης &amp; Ιωάννα Καράπαπας. Βύρωνος 114, Περιστέρι."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<style>
+:root{
+  /* Burgundy brand for Καράπαπας */
+  --primary: #800020;          /* μπορντώ */
+  --primary-dark: #660018;      /* πιο σκούρο για hover */
+  --secondary: #A23A4D;         /* συγγενές για διαβαθμίσεις */
+  --light: #fff7f9;             /* απαλό υπόβαθρο με ροζέ τόνο */
+  --dark: #111827;
+  --gray: #4b5563;
+  --white: #ffffff;
+  --light-gray: #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 10px 25px rgba(0,0,0,.06);
+  --shadow-hover: 0 15px 35px rgba(0,0,0,.12);
+  --transition: all .3s ease;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--dark);background:var(--white);overflow-x:hidden}
+
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Typography */
+h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.2;margin-bottom:1rem}
+h1{font-size:2.5rem}
+h2{font-size:2rem}
+h3{font-size:1.5rem}
+p{margin-bottom:1rem}
+a{color:var(--primary);text-decoration:none;transition:var(--transition)}
+a:hover{color:var(--primary-dark)}
+
+img{max-width:100%;height:auto;display:block}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:50px;font-weight:600;transition:var(--transition);cursor:pointer;border:2px solid var(--primary);text-align:center;color:var(--primary);background:transparent}
+.btn:hover{background:var(--primary);color:#fff;transform:translateY(-2px)}
+
+/* Header */
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;background-color:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 2px 15px rgba(0,0,0,.05);padding:14px 0}
+.header-container{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:nowrap}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px}
+.logo-text{font-weight:700;font-size:1.2rem}
+.logo-text span{color:var(--primary)}
+.nav-menu{display:flex;gap:2rem;list-style:none;white-space:nowrap;align-items:center;justify-content:center;flex:1}
+.nav-link{font-weight:500;color:var(--dark);position:relative;font-size:.98rem}
+.nav-link::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:linear-gradient(135deg,var(--primary),var(--secondary));transition:var(--transition)}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:1rem;flex-wrap:nowrap}
+.phone-link{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;color:var(--primary)}
+
+.mobile-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--dark)}
+
+/* Hero */
+.hero{padding:150px 0 80px;background:linear-gradient(135deg, rgba(128,0,32,.05) 0%, rgba(162,58,77,.05) 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-120px;width:420px;height:420px;border-radius:50%;background:linear-gradient(135deg, rgba(128,0,32,.10), rgba(162,58,77,.10));z-index:0}
+.hero-container{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:1}
+.hero-content h1{font-size:2.8rem;margin-bottom:1.5rem;color:var(--dark)}
+.hero-content p{font-size:1.1rem;color:var(--gray);margin-bottom:2rem}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background-color:#fff;border-radius:50px;font-size:.9rem;margin-bottom:1.5rem;border:1px solid var(--light-gray)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.stat-item{background-color:#fff;padding:1rem;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow)}
+.stat-value{font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:.25rem}
+.stat-label{font-size:.85rem;color:var(--gray)}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* Sections */
+.section-header{text-align:center;max-width:700px;margin:0 auto 3rem}
+.section-title{position:relative;display:inline-block;margin-bottom:1.5rem}
+.section-title::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:60px;height:3px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:3px}
+
+/* Services */
+.services{padding:80px 0}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.service-card{background:#fff;border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);transition:var(--transition);text-align:center}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+.service-icon{width:60px;height:60px;background:linear-gradient(135deg, rgba(128,0,32,.10), rgba(162,58,77,.10));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;color:var(--primary);font-size:1.5rem}
+
+/* Doctors */
+.doctors{padding:80px 0;background-color:var(--light)}
+.doctors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.doctor-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition)}
+.doctor-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+.doctor-info{padding:1.5rem}
+.doctor-name{font-size:1.25rem;margin-bottom:.5rem}
+.doctor-specialty{color:var(--primary);font-weight:600;margin-bottom:1rem}
+.doctor-description{color:var(--gray);margin-bottom:1.5rem;font-size:.95rem}
+.doctor-features{list-style:none}
+.doctor-features li{margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+.doctor-features li::before{content:'✓';color:var(--primary);font-weight:700}
+
+/* FAQ */
+.faq{padding:80px 0}
+.faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.faq-card{background:#fff;border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow)}
+.faq-question{font-size:1.1rem;margin-bottom:1rem;color:var(--dark)}
+.faq-answer{color:var(--gray);font-size:.95rem}
+
+/* Contact */
+.contact{padding:80px 0;background-color:var(--light)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact-info-block{display:flex;flex-direction:column;gap:1.5rem}
+.contact-item{display:flex;gap:1rem}
+.contact-icon{width:50px;height:50px;background:linear-gradient(135deg, rgba(128,0,32,.10), rgba(162,58,77,.10));border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.25rem;flex-shrink:0}
+.contact-details h4{font-size:1.1rem;margin-bottom:.5rem}
+.contact-details p,.contact-details a{color:var(--gray);margin-bottom:.25rem}
+
+/* Footer */
+footer{background-color:#1f2937;color:#fff;padding:40px 0 20px}
+.footer-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
+.footer-col h4{color:#fff;margin-bottom:1.5rem;position:relative;padding-bottom:.5rem}
+.footer-col h4::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:2px;background:linear-gradient(135deg,var(--primary),var(--secondary))}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:.75rem}
+.footer-links a{color:rgba(255,255,255,.75)}
+.footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.8);font-size:.9rem}
+
+.mobile-only{display:none}
+/* Responsive */
+@media (max-width:992px){
+  .hero-container{grid-template-columns:1fr;text-align:center}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  .mobile-only{display:block}
+  .nav-cta .btn{display:none}
+  .nav-cta .phone-link{display:flex;padding:.4rem .8rem;border:2px solid var(--primary);border-radius:9999px;background:#fff;color:var(--primary);font-weight:700}
+  .header-container{gap:.5rem}
+
+  .nav-cta .phone-link {white-space: nowrap; font-size: 0.9rem; line-height:1;}
+
+  .nav-menu{position:fixed;top:80px;left:-100%;width:100%;height:calc(100vh - 80px);background:#fff;flex-direction:column;justify-content:center;align-items:center;transition:var(--transition);gap:2rem}
+  .nav-menu.active{left:0}
+  .mobile-toggle{display:block}
+  .hero-content h1{font-size:2.2rem}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-actions{justify-content:center}
+}
+@media (max-width:576px){
+  .hero-stats{grid-template-columns:1fr}
+  .hero-actions .btn{width:100%}
+}
+
+@media (max-width:1100px){
+  .nav-menu{gap:1.25rem}
+  .logo-text{font-size:1rem}
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Οδοντιατρείο Καράπαπας",
+  "telephone": "+306945491441",
+  "email": "giannis.kara@hotmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Βύρωνος 114",
+    "addressLocality": "Περιστέρι",
+    "addressRegion": "Αττική",
+    "addressCountry": "GR"
+  },
+  "employee": [
+    { "@type": "Person", "name": "Ιωάννης Καράπαπας", "jobTitle": "Οδοντίατρος" },
+    { "@type": "Person", "name": "Ιωάννα Καράπαπας", "jobTitle": "Οδοντίατρος" }
+  ],
+  "priceRange": "$$",
+  "byAppointmentOnly": true,
+  "areaServed": "Περιστέρι"
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Μετάβαση στο κύριο περιεχόμενο</a>
+
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-tooth"></i></div>
+      <div class="logo-text">Οδοντιατρείο <span>Καράπαπας</span></div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a class="nav-link active" href="#home">Αρχική</a></li>
+      <li><a class="nav-link" href="#services">Υπηρεσίες</a></li>
+      <li><a class="nav-link" href="#doctors">Γιατροί</a></li>
+      <li><a class="nav-link" href="#faq">Συχνές Ερωτήσεις</a></li>
+      <li><a class="nav-link" href="#contact">Επικοινωνία</a></li>
+      <li class="mobile-only"><a class="btn" href="#contact">Ραντεβού</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="phone-link" href="tel:+302105767749">
+        <i class="fas fa-phone"></i> 210 576 7749
+      </a>
+      <a class="btn" href="#contact">Ραντεβού</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-badge"><i class="far fa-calendar-check"></i> Με ραντεβού</span>
+        <h1>Σύγχρονη οδοντιατρική φροντίδα στο Περιστέρι</h1>
+        <p>Πρόληψη, αισθητική οδοντιατρική, ενδοδοντία, περιοδοντολογία &amp; επείγοντα περιστατικά. Εξατομικευμένη φροντίδα για όλες τις ηλικίες.</p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">Άμεση</div>
+            <div class="stat-label">εξυπηρέτηση</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">2 Ιατροί</div>
+            <div class="stat-label">Ιωάννης &amp; Ιωάννα</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">Επείγοντα</div>
+            <div class="stat-label">κατόπιν κλήσης</div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn" href="tel:+306945491441"><i class="fas fa-phone"></i> Κλείστε ραντεβού</a>
+          <a class="btn" href="https://maps.app.goo.gl/1TYzyqb5TYU45Uyy5" target="_blank" rel="noopener">
+            <i class="fas fa-map-marker-alt"></i> Οδηγίες πρόσβασης
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="/img/smile.jpg" alt="Χαμογελαστός ασθενής στο οδοντιατρείο Καράπαπας" width="1200" height="800" decoding="async" loading="lazy" style="border-radius: var(--radius); box-shadow: var(--shadow-hover);" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Υπηρεσίες</h2>
+        <p>Ολοκληρωμένη φροντίδα στόματος για όλες τις ηλικίες με σύγχρονα μέσα και τεχνικές</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-tooth"></i></div>
+          <h3 class="service-title">Πρόληψη &amp; καθαρισμός</h3>
+          <p class="service-description">Έλεγχος, αφαίρεση τρυγίας και γυάλισμα για τη διατήρηση της βέλτιστης υγείας του στόματός σας.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
+          <h3 class="service-title">Σφραγίσματα</h3>
+          <p class="service-description">Συντηρητική αποκατάσταση τερηδονισμένων δοντιών με ασφάλεια και αισθητική.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-syringe"></i></div>
+          <h3 class="service-title">Ενδοδοντία (απονεύρωση)</h3>
+          <p class="service-description">Θεραπεία πολφού με ελάχιστη ενόχληση και σύγχρονα πρωτόκολλα.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-tooth"></i></div>
+          <h3 class="service-title">Περιοδοντολογία</h3>
+          <p class="service-description">Αντιμετώπιση ουλίτιδας &amp; περιοδοντίτιδας για υγιή ούλα και στόμα.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+          <h3 class="service-title">Λεύκανση</h3>
+          <p class="service-description">Ασφαλείς, στοχευμένες θεραπείες αισθητικής για πιο λευκά δόντια.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-scissors"></i></div>
+          <h3 class="service-title">Εξαγωγές / χειρουργικά</h3>
+          <p class="service-description">Ελάχιστα επεμβατικές τεχνικές όπου απαιτείται με άνεση και ασφάλεια.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors -->
+  <section class="doctors" id="doctors">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Οι Γιατροί</h2>
+        <p>Ιατρική επιστημοσύνη, καθαρή ενημέρωση και σεβασμός στον ασθενή</p>
+      </div>
+      <div class="doctors-grid">
+        <div class="doctor-card">
+          <div class="doctor-info">
+            <h3 class="doctor-name">Ιωάννης Καράπαπας</h3>
+            <p class="doctor-specialty">Οδοντίατρος</p>
+            <p class="doctor-description">Εξατομικευμένα πλάνα θεραπείας με έμφαση στην πρόληψη και την άνεση του ασθενούς.</p>
+            <ul class="doctor-features">
+              <li>Συντηρητική &amp; ενδοδοντία</li>
+              <li>Σύγχρονα υλικά &amp; τεχνικές</li>
+              <li>Αυστηρά πρωτόκολλα υγιεινής</li>
+            </ul>
+          </div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-info">
+            <h3 class="doctor-name">Ιωάννα Καράπαπας</h3>
+            <p class="doctor-specialty">Οδοντίατρος</p>
+            <p class="doctor-description">Ολιστική προσέγγιση στην αισθητική και περιοδοντική υγεία με προσωπική φροντίδα.</p>
+            <ul class="doctor-features">
+              <li>Αισθητική οδοντιατρική</li>
+              <li>Περιοδοντολογία</li>
+              <li>Εξατομικευμένες θεραπείες λεύκανσης</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Συχνές Ερωτήσεις</h2>
+        <p>Απαντήσεις στις πιο συχνές ερωτήσεις που μας κάνετε</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3 class="faq-question">Πονάει η θεραπεία;</h3>
+          <p class="faq-answer">Χρησιμοποιούμε τοπική αναισθησία και ήπιες τεχνικές για μέγιστη άνεση. Η πλειονότητα των θεραπειών πραγματοποιείται χωρίς πόνο.</p>
+        </div>
+        <div class="faq-card">
+          <h3 class="faq-question">Δέχεστε επείγοντα περιστατικά;</h3>
+          <p class="faq-answer">Ναι, κατόπιν τηλεφωνικής επικοινωνίας για άμεσο ραντεβού. Είμαστε δίπλα σας σε περιπτώσεις επείγοντος πόνου ή τραυματισμού.</p>
+        </div>
+        <div class="faq-card">
+          <h3 class="faq-question">Πώς κλείνω ραντεβού;</h3>
+          <p class="faq-answer">Καλέστε στο <a class="phone-link" href="tel:+306945491441"><i class="fas fa-phone"></i>&nbsp;694 549 1441</a> ή στείλτε email στο <a href="mailto:giannis.kara@hotmail.com"><i class="fas fa-envelope"></i>&nbsp;giannis.kara@hotmail.com</a>.</p>
+        </div>
+        <div class="faq-card">
+          <h3 class="faq-question">Ποια είναι τα ωράρια λειτουργίας;</h3>
+          <p class="faq-answer">Δευτέρα - Παρασκευή: 09:00 - 13:00 και Τετάρτη &amp; Παρασκευή: 17:30 - 20:30. Κάθε ραντεβού κανονίζεται κατόπιν τηλεφωνικής επικοινωνίας.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Επικοινωνία</h2>
+        <p>Είμαστε στη διάθεσή σας για οποιαδήποτε πληροφορία ή κράτηση ραντεβού</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-block">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-details">
+              <h4>Διεύθυνση</h4>
+              <p>Βύρωνος 114, Περιστέρι, Αττική</p>
+              <a href="https://maps.app.goo.gl/1TYzyqb5TYU45Uyy5" target="_blank" rel="noopener">➡️ Οδηγίες πρόσβασης (Google Maps)</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-details">
+              <h4>Τηλέφωνα</h4>
+              <a class="phone-link" href="tel:+302105767749"><i class="fas fa-phone"></i>&nbsp;210 576 7749</a>
+              <a class="phone-link" href="tel:+306945491441"><i class="fas fa-phone"></i>&nbsp;694 549 1441</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:giannis.kara@hotmail.com"><i class="fas fa-envelope"></i>&nbsp;giannis.kara@hotmail.com</a>
+              <p>Απαντάμε εντός 24 ωρών</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-container" style="border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);">
+          <iframe src="https://www.google.com/maps?q=Βύρωνος+114,+Περιστέρι&output=embed" loading="lazy"  width=100% height=100%></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-container">
+    <div class="footer-col">
+      <h4>Οδοντιατρείο Καράπαπας</h4>
+      <p>Σύγχρονη οδοντιατρική φροντίδα στο Περιστέρι. Πρόληψη, αισθητική, ενδοδοντία &amp; περιοδοντολογία.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Χρήσιμοι Σύνδεσμοι</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Υπηρεσίες</a></li>
+        <li><a href="#doctors">Οι Γιατροί</a></li>
+        <li><a href="#faq">Συχνές Ερωτήσεις</a></li>
+        <li><a href="#contact">Επικοινωνία</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Επικοινωνία</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+302105767749"><i class="fas fa-phone"></i>&nbsp;210 576 7749</a></li>
+        <li><a href="tel:+306945491441"><i class="fas fa-phone"></i>&nbsp;694 549 1441</a></li>
+        <li><a href="mailto:giannis.kara@hotmail.com"><i class="fas fa-envelope"></i>&nbsp;giannis.kara@hotmail.com</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer-col">
+      <h4>Ωράριο Λειτουργίας</h4>
+      <p>Δευτέρα - Παρασκευή: 09:00 - 13:00<br>Τετάρτη &amp; Παρασκευή: 17:30 - 20:30<br>
+      Κάθε ραντεβού κανονίζεται κατόπιν τηλεφωνικής επικοινωνίας.</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">© Καράπαπας — {year}</div>
+</footer>
+
+<script>
+// year
+document.querySelector('.footer-bottom').innerHTML = "© Καράπαπας — " + new Date().getFullYear();
+// mobile menu
+(function(){var t=document.getElementById('mobileToggle'),m=document.getElementById('navMenu');if(!t||!m)return;t.addEventListener('click',function(){m.classList.toggle('active');document.body.classList.toggle('no-scroll')});m.addEventListener('click',function(e){if(e.target.tagName.toLowerCase()==='a'){m.classList.remove('active');document.body.classList.remove('no-scroll')}})})();
+</script>
+
+</body>
+</html>
