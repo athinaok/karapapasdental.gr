@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+
+<html lang="el">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Οδοντιατρείο Καραπαπά | Περιστέρι | Ιωάννης &amp; Ιωάννα Καραπαπά</title>
+<meta content="Σύγχρονο οδοντιατρείο στο Περιστέρι. Πρόληψη, αισθητική οδοντιατρική, ενδοδοντία. Ιωάννης &amp; Ιωάννα Καραπαπά. Βύρωνος 114, Περιστέρι." name="description"/>
+<meta content="index, follow" name="robots"/>
+<!-- Preload critical resources -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome for icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --secondary: #22d3ee;
+      --accent: #ec4899;
+      --light: #f8fafc;
+      --dark: #111827;
+      --gray: #4b5563;
+      --light-gray: #e5e7eb;
+      --white: #ffffff;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--white);
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    a:hover {
+      color: var(--primary-dark);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      padding: 15px 0;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+    
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    
+    .logo-text span {
+      color: var(--primary);
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .phone-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--dark);
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 150px 0 80px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(34, 211, 238, 0.05) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
+      z-index: 0;
+    }
+    
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+    }
+    
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--light);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--light-gray);
+    }
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .stat-item {
+      background-color: var(--white);
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    
+    .stat-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+    
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+    
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .hero-image {
+      position: relative;
+    }
+    
+    .hero-image img {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 80px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 3px;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .service-card {
+      background-color: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+    
+    .service-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .service-description {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+    
+    /* Doctors Section */
+    .doctors {
+      padding: 80px 0;
+      background-color: var(--light);
+    }
+    
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .doctor-card {
+      background-color: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .doctor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .doctor-image {
+      height: 250px;
+      overflow: hidden;
+    }
+    
+    .doctor-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .doctor-card:hover .doctor-image img {
+      transform: scale(1.05);
+    }
+    
+    .doctor-info {
+      padding: 1.5rem;
+    }
+    
+    .doctor-name {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .doctor-specialty {
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    
+    .doctor-description {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .doctor-features {
+      list-style: none;
+    }
+    
+    .doctor-features li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .doctor-features li::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: bold;
+    }
+    
+    /* FAQ Section */
+    .faq {
+      padding: 80px 0;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .faq-card {
+      background-color: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    
+    .faq-question {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    
+    .faq-answer {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+    
+    /* Contact Section */
+    .contact {
+      padding: 80px 0;
+      background-color: var(--light);
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .contact-details h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-details p, 
+    .contact-details a {
+      color: var(--gray);
+      margin-bottom: 0.25rem;
+    }
+    
+    .map-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      height: 100%;
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: var(--white);
+      padding: 40px 0 20px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-col h4 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: var(--white);
+      padding-left: 5px;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .map-container {
+        height: 300px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        gap: 2rem;
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+      
+      .mobile-toggle {
+        display: block;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .hero-actions {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  
+/* === Mobile layout fixes === */
+@media (max-width: 768px) {
+  .header-container { gap: .5rem; }
+  .nav-cta .btn { display: none; } /* hide header CTA on mobile; we show it in the menu */
+  .phone-link { white-space: nowrap; font-size: 0; padding: 8px; } /* keep only icon visible */
+  .phone-link i { font-size: 1.25rem; }
+  .logo-text { font-size: 1rem; } /* slightly smaller logo text to prevent crowding */
+}
+/* Disable body scroll when nav is open */
+body.no-scroll { overflow: hidden; }
+
+/* === Desktop header fixes === */
+@media (min-width: 992px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-cta .btn {
+    order: 1; /* show button first */
+  }
+  .nav-cta .phone-number {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #007bff;
+    order: 2;
+    white-space: nowrap;
+  }
+  /* hide duplicate cta */
+  .header-container .btn + .btn {
+    display: none;
+  }
+}
+
+/* === Header desktop fixes === */
+.mobile-only { display: none; } /* visible only on mobile */
+.header-container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.header-right { display: flex; align-items: center; gap: 1rem; }
+.phone-link { white-space: nowrap; font-size: 1rem; line-height: 1; }
+.phone-link i { vertical-align: middle; }
+.navbar ul li { white-space: nowrap; } /* prevent breaking menu items */
+
+@media (max-width: 768px) {
+  .mobile-only { display: block; }
+  .header-right { gap: .5rem; }
+}
+</style>
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Οδοντιατρείο Καραπαπά",
+    "telephone": "+302105767749",
+    "email": "giannis.kara@hotmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Βύρωνος 114",
+      "addressLocality": "Περιστέρι",
+      "addressRegion": "Αττική",
+      "addressCountry": "GR"
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Ιωάννης Καραπαπάς",
+        "jobTitle": "Οδοντίατρος"
+      },
+      {
+        "@type": "Person", 
+        "name": "Ιωάννα Καραπαπά",
+        "jobTitle": "Οδοντίατρος"
+      }
+    ],
+    "priceRange": "$$",
+    "byAppointmentOnly": true,
+    "areaServed": "Περιστέρι"
+  }
+  </script>
+</head>
+<body>
+<!-- Skip to content link for accessibility -->
+<a class="skip-link" href="#main">Μετάβαση στο κύριο περιεχόμενο</a>
+<!-- Header -->
+<header>
+<div class="container header-container">
+<div class="logo">
+<div class="logo-icon">
+<i class="fas fa-tooth"></i>
+</div>
+<div class="logo-text">Οδοντιατρείο <span>Καραπαπά</span></div>
+</div>
+<button class="mobile-toggle" id="mobileToggle">
+<i class="fas fa-bars"></i>
+</button>
+<ul class="nav-menu" id="navMenu">
+<li><a class="nav-link active" href="#home">Αρχική</a></li>
+<li><a class="nav-link" href="#services">Υπηρεσίες</a></li>
+<li><a class="nav-link" href="#doctors">Γιατροί</a></li>
+<li><a class="nav-link" href="#faq">Συχνές Ερωτήσεις</a></li>
+<li><a class="nav-link" href="#contact">Επικοινωνία</a></li>
+<li class="mobile-only"><a class="btn btn-primary" href="#contact">Ραντεβού</a></li></ul>
+<div class="nav-cta">
+<a class="phone-link" href="tel:+302105767749">
+<i class="fas fa-phone"></i>
+    2105767749
+        </a>
+<a class="btn btn-primary" href="#contact">Ραντεβού</a>
+</div>
+</div>
+</header>
+<main id="main">
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="container hero-container">
+<div class="hero-content">
+<span class="hero-badge">
+<i class="far fa-calendar-check"></i>
+            Με ραντεβού
+          </span>
+<h1>Σύγχρονη οδοντιατρική φροντίδα στο Περιστέρι</h1>
+<p>Πρόληψη, αισθητική οδοντιατρική, ενδοδοντία, περιοδοντολογία &amp; επείγοντα περιστατικά. Εξατομικευμένη φροντίδα για όλες τις ηλικίες.</p>
+<div class="hero-stats">
+<div class="stat-item">
+<div class="stat-value">Άμεση</div>
+<div class="stat-label">εξυπηρέτηση</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">2 Ιατροί</div>
+<div class="stat-label">Ιωάννης &amp; Ιωάννα</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">Επείγοντα</div>
+<div class="stat-label">κατόπιν κλήσης</div>
+</div>
+</div>
+<div class="hero-actions">
+<a class="btn btn-primary phone-link" href="tel:+302105767749">
+<i class="fas fa-phone"></i>
+              Κλείστε ραντεβού
+            </a>
+<a class="btn btn-secondary" href="https://maps.app.goo.gl/1TYzyqb5TYU45Uyy5"  rel="noopener" target="_blank">
+<i class="fas fa-map-marker-alt"></i>
+              Οδηγίες πρόσβασης
+            </a>
+</div>
+</div>
+<div class="hero-image">
+<picture><source sizes="(max-width: 640px) 100vw, 640px" srcset="img/smile-400.webp 400w, img/smile-800.webp 800w, img/smile-1200.webp 1200w" type="image/webp"/><source sizes="(max-width: 640px) 100vw, 640px" srcset="img/smile-400.jpg 400w, img/smile-800.jpg 800w, img/smile-1200.jpg 1200w" type="image/jpeg"/><img alt="Χαμογελαστός ασθενής στο οδοντιατρείο Καραπαπά" decoding="async" height="800" loading="lazy" src="img/smile-800.jpg" style="aspect-ratio: 1200 / 800;" width="1200"/></picture>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="services" id="services">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Υπηρεσίες</h2>
+<p>Ολοκληρωμένη φροντίδα στόματος για όλες τις ηλικίες με σύγχρονα μέσα και τεχνικές</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-tooth"></i>
+</div>
+<h3 class="service-title">Πρόληψη &amp; καθαρισμός</h3>
+<p class="service-description">Έλεγχος, αφαίρεση τρυγίας και γυάλισμα για τη διατήρηση της βέλτιστης υγείας του στόματός σας.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-stethoscope"></i>
+</div>
+<h3 class="service-title">Σφραγίσματα</h3>
+<p class="service-description">Συντηρητική αποκατάσταση τερηδονισμένων δοντιών με ασφάλεια και αισθητική.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-syringe"></i>
+</div>
+<h3 class="service-title">Ενδοδοντία (απονεύρωση)</h3>
+<p class="service-description">Θεραπεία πολφού με ελάχιστη ενόχληση και σύγχρονα πρωτόκολλα.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-teeth"></i>
+</div>
+<h3 class="service-title">Περιοδοντολογία</h3>
+<p class="service-description">Αντιμετώπιση ουλίτιδας &amp; περιοδοντίτιδας για υγιή ούλα και στόμα.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-sparkles"></i>
+</div>
+<h3 class="service-title">Λεύκανση</h3>
+<p class="service-description">Ασφαλείς, στοχευμένες θεραπείες αισθητικής για πιο λευκά δόντια.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-scissors"></i>
+</div>
+<h3 class="service-title">Εξαγωγές / χειρουργικά</h3>
+<p class="service-description">Ελάχιστα επεμβατικές τεχνικές όπου απαιτείται με άνεση και ασφάλεια.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctors Section -->
+<section class="doctors" id="doctors">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Οι Γιατροί</h2>
+<p>Ιατρική επιστημοσύνη, καθαρή ενημέρωση και σεβασμός στον ασθενή</p>
+</div>
+<div class="doctors-grid">
+<div class="doctor-card">
+<div class="doctor-info">
+<h3 class="doctor-name">Ιωάννης Καραπαπάς</h3>
+<p class="doctor-specialty">Οδοντίατρος</p>
+<p class="doctor-description">Εξατομικευμένα πλάνα θεραπείας με έμφαση στην πρόληψη και την άνεση του ασθενούς.</p>
+<ul class="doctor-features">
+<li>Συντηρητική &amp; ενδοδοντία</li>
+<li>Σύγχρονα υλικά &amp; τεχνικές</li>
+<li>Αυστηρά πρωτόκολλα υγιεινής</li>
+</ul>
+</div>
+</div>
+<div class="doctor-card">
+<div class="doctor-info">
+<h3 class="doctor-name">Ιωάννα Καραπαπά</h3>
+<p class="doctor-specialty">Οδοντίατρος</p>
+<p class="doctor-description">Ολιστική προσέγγιση στην αισθητική και περιοδοντική υγεία με προσωπική φροντίδα.</p>
+<ul class="doctor-features">
+<li>Αισθητική οδοντιατρική</li>
+<li>Περιοδοντολογία</li>
+<li>Εξατομικευμένες θεραπείες λεύκανσης</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="faq" id="faq">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Συχνές Ερωτήσεις</h2>
+<p>Απαντήσεις στις πιο συχνές ερωτήσεις που μας κάνετε</p>
+</div>
+<div class="faq-grid">
+<div class="faq-card">
+<h3 class="faq-question">Πονάει η θεραπεία;</h3>
+<p class="faq-answer">Χρησιμοποιούμε τοπική αναισθησία και ήπιες τεχνικές για μέγιστη άνεση. Η πλειονότητα των θεραπειών πραγματοποιείται χωρίς πόνο.</p>
+</div>
+<div class="faq-card">
+<h3 class="faq-question">Δέχεστε επείγοντα περιστατικά;</h3>
+<p class="faq-answer">Ναι, κατόπιν τηλεφωνικής επικοινωνίας για άμεσο ραντεβού. Είμαστε δίπλα σας σε περιπτώσεις επείγοντος πόνου ή τραυματισμού.</p>
+</div>
+<div class="faq-card">
+<h3 class="faq-question">Πώς κλείνω ραντεβού;</h3>
+<p class="faq-answer">Μπορείτε να καλέσετε στο <a class="phone-link" href="tel:+302105767749">2105767749</a> κατά τις ώρες λειτουργίας ή να μας στείλετε email στο <a href="mailto:giannis.kara@hotmail.com">giannis.kara@hotmail.com</a>.</p>
+</div>
+<div class="faq-card">
+<h3 class="faq-question">Ποια είναι τα ωράρια λειτουργίας;</h3>
+<p class="faq-answer">Δευτέρα - Παρασκευή: 09:00 - 13:00 και Τετάρτη &amp; Παρασκευή : 17:30 - 20:30. Κάθε ραντεβού κανονίζεται κατόπιν τηλεφωνικής επικοινωνίας.</p>
+</div>
+<div class="faq-card">
+<h3 class="faq-question">Πληρώνω με ασφάλιση;</h3>
+<p class="faq-answer">Συνεργαζόμαστε με τους κύριους ασφαλιστικούς φορείς. Κατά την κράτηση ραντεβού, μπορούμε να σας ενημερώσουμε για τη συγκεκριμένη κάλυψη.</p>
+</div>
+<div class="faq-card">
+<h3 class="faq-question">Πόσο διαρκεί μια επίσκεψη;</h3>
+<p class="faq-answer">Η διάρκεια εξαρτάται από τη θεραπεία. Οι ρουτίνας ελέγχοι διαρκούν 30-45 λεπτά, ενώ πιο σύνθετες θεραπείες μπορεί να απαιτούν 1-2 ώρες.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Επικοινωνία</h2>
+<p>Είμαστε στη διάθεσή σας για οποιαδήποτε πληροφορία ή κράτηση ραντεβού</p>
+</div>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<div class="contact-details">
+<h4>Διεύθυνση</h4>
+<p>Βύρωνος 114, Περιστέρι, Αττική</p>
+<a href="https://maps.app.goo.gl/1TYzyqb5TYU45Uyy5" rel="noopener" target="_blank">➡️ Οδηγίες πρόσβασης (Google Maps)</a>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-phone"></i>
+</div>
+<div class="contact-details">
+<h4>Τηλέφωνο</h4>
+<a class="phone-link" href="tel:+302105767749">2105767749</a>
+<p>Δευτ–Παρ: 09:00 - 20:00 | Σάβ: 10:00 - 16:00</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-envelope"></i>
+</div>
+<div class="contact-details">
+<h4>Email</h4>
+<a href="mailto:giannis.kara@hotmail.com">giannis.kara@hotmail.com</a>
+<p>Απαντάμε εντός 24 ωρών</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="far fa-clock"></i>
+</div>
+<div class="contact-details">
+<h4>Ωράριο Λειτουργίας</h4>
+	<p>Δευτέρα - Παρασκευή: 09:00 - 13:00</p><p>Τετάρτη &amp; Παρασκευή : 17:30 - 20:30</p></div></div></div></div></div></section></main>
+<script>
+(function() {
+  var toggle = document.getElementById('mobileToggle');
+  var menu = document.getElementById('navMenu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function() {
+    menu.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+  });
+  // Close menu when clicking a link (better UX)
+  menu.addEventListener('click', function(e){
+    if (e.target.tagName.toLowerCase() === 'a') {
+      menu.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+})();
+</script>
+</body></html>
